@@ -1,0 +1,25 @@
+        
+<!-- ============================================================== -->
+<!-- Profile - style you can find in header.scss -->
+<!-- ============================================================== -->
+<!-- <a href="https://wrappixel.com/templates/materialpro-angular-dashboard/" class=" m-r-20 hidden-sm-up" mat-raised-button color="warn">Upgrade To Pro</a> -->
+<span i18n="last_Connexion | last connexion of users.@@last_Connexion" class="date">Last Connexion:{{date|date:'dd:MM:yyyy hh:mm'}}<span>&nbsp;
+<select class="m-r-20 decorer" (change)="setLangue()" ngModel="langue">
+    <option value="fr"> <a href="/fr"></a> Fr</option>
+    <option value="an"><a href="/"></a> En</option>
+    <option value="es"><a href="/es"></a> Es</option>
+
+</select>
+<button class="m-r-20 espace" mat-mini-fab color="warn" >h</button>
+<button [matMenuTriggerFor]="profile" mat-icon-button class="m-r-20" > <img src="assets/images/users/1.jpg" alt="user" class="profile-pic"> </button>
+<mat-menu #profile="matMenu" class="mymegamenu">
+    <button mat-menu-item>
+        <mat-icon >settings</mat-icon><span >Settings</span>  </button>
+    <button mat-menu-item>
+        <mat-icon>account_box</mat-icon> Profile </button>
+    <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon> Disable notifications </button>
+    <button mat-menu-item routerLink="/auth">
+        <mat-icon>exit_to_app</mat-icon> Sign Out </button>
+</mat-menu>
+<button  mat-mini-fab color="secondary"><mat-icon>settings</mat-icon></button>
